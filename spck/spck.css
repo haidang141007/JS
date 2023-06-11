@@ -5,7 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 img {
-    width: 100px;
+    width: 120px;
     height: 60px;
 }
 li{
@@ -18,16 +18,16 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 12px 50px;
-    height: 70px;
+    height: 80px;
 }
 .logo{
-    flex: 1;
-    
+flex: 1;
+    align-items: center;
 }
 .menu{
     flex: 3 ;
     display: flex;
-   
+    align-items: center;
 }
 .menu > li{
     padding: 0 12px;
@@ -35,10 +35,26 @@ header{
 .others{
     flex: 1;
     display: flex;
+    align-items: center;
 }
 .others > li{
     padding: 0 12px;
 }
 .others > li:first-child{
     position: relative
+}
+header{
+    background-color: #555
+}
+a{
+    font-size: 25px;
+    color: aliceblue;
+    padding: 0 13px ;
+}
+svg{
+    width: 40px;
+    padding: 0 8px;
+}
+h1 > a{
+    color: black;
 }

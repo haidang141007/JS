@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login form with JavaScript Validation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="logo text-center">
+  <h1><img src="data:image/png;base64,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"></h1>
+</div>
+<div class="wrapper">
+  <div class="inner-warpper text-center">
+    <h2 class="title">Login</h2>
+    <form action="" id="formvalidate">
+      <div class="input-group">
+        <label class="palceholder" for="userName">User Name</label>
+        <input class="form-control" name="userName" id="userName" type="text" placeholder="" />
+        <span class="lighting"></span>
+      </div>
+      <div class="input-group">
+        <label class="palceholder" for="userPassword">Password</label>
+        <input class="form-control" name="userPassword" id="userPassword" type="password" placeholder="" />
+        <span class="lighting"></span>
+      </div>
+
+      <button type="submit" id="login">Login</button>
+      <div class="clearfix supporter">
+        <div class="pull-left remember-me">
+          <input id="rememberMe" type="checkbox">
+          <label for="rememberMe">Remember Me</label>
+        </div>
+        <a class="forgot pull-right" href="#">Forgot Password?</a>
+      </div>
+    </form>
+  </div>
+  <div class="signup-wrapper text-center">
+    <a href="#">Don't have an accout? <span class="text-primary">Create One</span></a>
+  </div>
+</div>
+
+
+
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js'></script><script  src="login.js"></script>
+
+</body>
+</html>
