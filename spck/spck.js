@@ -1,4 +1,4 @@
-const carousel = document.querySelector(".carousel"),
+const carousel = document.querySelector(".carousel1"),
 firstImg = carousel.querySelectorAll("img")[0],
 arrowIcons = document.querySelectorAll(".wrapper i");
 
@@ -71,3 +71,28 @@ carousel.addEventListener("touchmove", dragging);
 
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("touchend", dragStop);
+/*slideshow2*/
+document.addEventListener("DOMContentLoaded", function() {
+    const carouselContainer = document.querySelector(".carousel-container");
+    const prevButton = document.querySelector(".carousel-prev-btn");
+    const nextButton = document.querySelector(".carousel-next-btn");
+  
+    let slideIndex = 0;
+  
+    function showSlide(index) {
+      carouselContainer.style.transform = `translateX(-${index * (100 / 3)}%)`;
+    }
+  
+    function prevSlide() {
+      slideIndex = (slideIndex - 1 + 6) % 6; // Total of 6 slides
+      showSlide(slideIndex);
+    }
+  
+    function nextSlide() {
+      slideIndex = (slideIndex + 1) % 6; // Total of 6 slides
+      showSlide(slideIndex);
+    }
+  
+    prevButton.addEventListener("click", prevSlide);
+    nextButton.addEventListener("click", nextSlide);
+  });
