@@ -59,7 +59,9 @@ svg{
 h1 > a{
   color: black;
 }
-
+.icon-bar{
+  display: flex;
+}
 /* Slideshow */
 .wrapper{
   display: flex;

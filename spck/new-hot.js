@@ -21,3 +21,5 @@ function w3RemoveClass(element, name) {
       this.className += " active";
     });
   }
+
+  
